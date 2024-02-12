@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Meeting Schedule</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 4px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 4px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <h2> Create a Meeting Schedule</h2>
+        <hr>
+        <label for="meetingTopic">Meeting Topic:</label>
+        <select id="meetingTopic" name="meetingTopic" placeholder="Enter meeting topic" required>
+            <option value=" "disabled selected hidden>Enter meeting topic</option>
+        </select>
+
+        <label for="numberofPeople">Number of People:</label>
+        <select id="numberofPeople" name="numberofPeople" required>
+            <option value=" " disabled selected hidden>Enter number of people</option>
+            <option value="1"> 1</option>
+            <option value="2"> 2</option>
+            <option value="3"> 3</option>
+            <option value="4"> 4</option>
+        </select>
+
+        <label for="meetingDate">Meeting Date:</label>
+        <input type="date" id="meetingDate" name="meetingDate" required>
+
+        <label for="meetingTime">Meeting Time:</label>
+        <input type="time" id="meetingTime" name="meetingTime" required>
+
+        <label for="clientSelect">Select Client:</label>
+        <select id="clientSelect" name="clientSelect" required>
+            <option value="client1">Client 1</option>
+            <option value="client2">Client 2</option>
+            <!-- Add more clients as needed -->
+        </select>
+
+        <button type="submit">Schedule Meeting</button>
+    </form>
+</body>
+</html>
